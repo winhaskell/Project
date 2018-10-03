@@ -1,0 +1,136 @@
+http://xahlee.info/ocaml/ocaml_basics.html
+
+(* comment. *)
+(* comment can be (* nested *).*)
+
+print_int 3;;
+print_string "\n";;
+
+print_float 3.0;;
+print_string "\n";;
+
+print_string "good!";;
+
+(* can use \n *)
+print_string "Once\n upon a time";;
+
+(* can have lineral linebreak *)
+print_string "aa
+bb\n";;
+
+(* con contain Unicode *)
+print_string "∑ α ≥ ≠ ♥\n";;
+
+(* join strings. Use ^ *)
+print_string ("a" ^ "b" ^ "c");;
+
+print_int (3 + 4);; (* integer *)
+print_string "\n";;
+
+print_float (2. +. 7.);; (* float. *)
+(* The “+.” is for adding number of float type *)
+
+(* here's a function of 2 parameters *)
+let f x y = x + y;;
+
+(* function call *)
+f 3 4;;                         (* ⇒ 7 *)
+
+(* do not put paren in function argument *)
+
+(* it's ok to put paren to group the whole function call *)
+(f 3 4);;                       (* ⇒ 7 *)
+
+
+(* example of values having built-in types *)
+
+3 ;;    (* int *)
+3. ;;   (* float *)
+'x' ;;  (* char *)
+"something" ;; (* string *)
+true;;             (* bool *)
+false;;            (* bool *)
+() ;;              (* unit *)
+
+
+let x = 5;;
+if x == 3 then print_string "yay\n" else print_string "nay\n";;
+if x >= 3 then print_string "yay\n";;
+
+let b = 4;;
+let b = 5;;
+print_int b;; (* now b is 5 *)
+
+
+(* list syntax *)
+(* elements must all be the same type *)
+let x = [ 2; 8; 5; ];;
+
+let x = [ 2; 8; 5; ];;
+List.length x;;                 (* ⇒ 3 *)
+
+let x = [ 2; 8; 5; ];;
+
+(* first element, called “head”. *)
+List.hd x;;                             (* ⇒ 2 *)
+
+(* rest elements, from 2nd to last, called “tail”. *)
+List.tl x;;                             (* ⇒ [8; 5] *)
+
+let x = [ 2; 8; 5; ];;
+
+(* prepending a element *)
+4::x;;                          (* ⇒ [4; 2; 8; 5; ] *)
+
+(* prepending several elements *)
+1::9::4::x;;                    (* ⇒ [1; 9; 4; 2; 8; 5] *)
+
+(* join 2 lists *)
+[ 2; 8; 5; ] @ [ 3; 4; ]
+
+(* array *)
+let x = [| 2; 8; 3 |];;
+
+(* getting a element *)
+print_int x.(1);;         (* prints 8. Index starts at 0 *)
+
+(* arbitrary n-tuple can be created *)
+let x = 3,4,8 ;;                 (* 3-tuple *)
+let y = 7.8, "abc", 4, 8;;      (* 4-tuple *)
+
+(* when ambiguous, tuple needs to have parenthesis around *)
+
+(* define named function *)
+let f x = x + 1;;
+f 3;;                           (* ⇒ 4 *)
+
+(* named function of 2 parameters *)
+let f x y = x + y;;
+f 3 4;;                                 (* ⇒ 7 *)
+
+(* example of factorial function *)
+let rec f n = if n == 1 then 1 else n * f (n-1);;
+f 3                                     (* ⇒ 6 *)
+
+(* example of fibonacci sequence. *)
+(* nth term is sum of previous 2 terms. Starting with 0 and 1. *)
+let rec f n = match n with 0 -> 0 | 1 -> 1 | x -> f (n-1) + f (n-2);;
+f 9;;                                  (* ⇒ 34 *)
+
+
+let f s = s ^ "1";;             (* append 1 to string *)
+let g s = s ^ "2";;             (* append 2 to string *)
+let h s = s ^ "3";;             (* append 3 to string *)
+
+h (g (f "x"));;                 (* ⇒ "x123" *)
+
+let ( symbol_chars ) left_arg right_arg = expression
+(* define operator for vector addition of 2 dimensional vectors *)
+(* using 2-tuple as vectors *)
+let ( @+ ) vec1 vec2 = ( (fst vec1)+(fst vec2), (snd vec1)+(snd vec2) ) ;;
+(3,4) @+ (5,6);;                        (* ⇒ (8,10) *)
+
+Note: the char sequence used for operator is limited to one of following chars:
+
+! $ % & * + - . / : ? @ ^ < > = | ~
+
