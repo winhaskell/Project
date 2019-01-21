@@ -11,3 +11,43 @@ In the institutional setting, issue tracking systems are commonly used in an org
 create, update, and resolve reported customer issues, or even issues reported by that organization's other employees.
 A support ticket should include vital information for the account involved and the issue encountered. An issue tracking system
 often also contains a knowledge base containing information on each customer, resolutions to common problems, and other such data.
+
+
+Functions
+Issue-tracking systems fulfill different functions, in particular:
+
+Entering of dysfunctions, errors and requests (e.g. manually or by e-mail Response Management Systems)
+Distribution and assignment of issues to persons in charge
+Monitoring of handling, time spent and quality of work
+Ensuring the observation of internal processes by forced control with help of workflows
+Statistical analysis of the number of tickets
+Automatic generation of tickets by alarming systems, e.g. network monitoring
+Fulfillment of external service agreements (Service Level Agreement, SLA)
+Systematic collection of questions and answers for FAQs
+Assignment of a priority to each issue based on the overall importance of that issue, the customer, date of submission, SLA
+Containing a detailed descriptions of the problem being experienced, attempted solutions or workarounds, and other relevant 
+information Maintaining of a history of each change
+
+
+
+Workflow
+An example scenario is presented to demonstrate how a common issue tracking system would work:
+
+A customer service technician receives a telephone call, email, or other communication from a customer about a problem.
+Some applications provide built-in messaging system and automatic error reporting from exception handling blocks.
+
+The technician verifies that the problem is real, and not just perceived. The technician will also ensure that enough information
+about the problem is obtained from the customer. This information generally includes the environment of the customer, 
+when and how the issue occurs, and all other relevant circumstances.
+
+The technician creates the issue in the system, entering all relevant data, as provided by the customer.
+
+As work is done on that issue, the system is updated with new data by the technician. Any attempt at fixing the problem 
+should be noted in the issue system. Ticket status most likely will be changed from open to pending.
+
+After the issue has been fully addressed, it is marked as resolved in the issue tracking system.
+
+If the problem is not fully resolved, the ticket will be reopened once the technician receives new information from the customer. 
+A Run Book Automation process that implements best practices for these workflows and increases IT personnel effectiveness is
+becoming very common.
+
