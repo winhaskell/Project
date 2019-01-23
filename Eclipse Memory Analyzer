@@ -1,0 +1,11 @@
+Eclipse Memory Analyzer
+https://www.ibm.com/developerworks/cn/opensource/os-cn-ecl-ma/index.html
+https://www.eclipse.org/mat/
+
+Memory Analyzer (MAT)
+The Eclipse Memory Analyzer is a fast and feature-rich Java heap analyzer that helps you find memory leaks and reduce memory consumption.
+
+Use the Memory Analyzer to analyze productive heap dumps with hundreds of millions of objects, 
+quickly calculate the retained sizes of objects, see who is preventing the Garbage Collector from collecting objects, 
+run a report to automatically extract leak suspects.
+
